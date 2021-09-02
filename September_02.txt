@@ -1,0 +1,90 @@
+Assignment : 02-09-21
+--------------------------------------------------------------------
+
+public class Score
+{
+	public static void main(String[] args) {
+	    int[] score = {89,70,63,94,49};
+	    int total=0;
+	    float average,percentage;
+	    for(int sum:score){
+	        total+=sum;
+	    }
+	    average = total/5;
+	    System.out.println("Average = "+average);
+	    percentage = (total*100/500);
+	    System.out.println("Percentage = "+percentage);
+	}
+}
+
+-----------------------------------------------------------------
+
+public class ThreeDArray
+{
+	public static void main(String[] args) {
+	   int first[][] = {{1,2,3},{1,2,3},{1,2,3}};
+	   int second[][] = {{4,5,6},{4,5,6},{4,5,6}};
+	   int third[][] = {{7,8,9},{7,8,9},{7,8,9}};
+	   int[][] multiply = new int[3][3];
+	   
+	   for(int i=0;i<3;i++){
+	       for(int j=0;j<3;j++){
+	           for(int k=0;k<3;k++){
+	               multiply[j][k]=first[j][k]*second[j][k]*third[j][k];
+	           }
+	       }
+	   }
+	   for(int i=0;i<3;i++){
+	       for(int j=0;j<3;j++){
+	           for(int k=0;k<3;k++){
+	             System.out.print(multiply[j][k]+" ");
+	           }
+	         break;
+	       }
+	       System.out.println();
+	   }
+	   
+	       
+	   }
+}
+
+-------------------------------------------------------------------------------
+
+public class WordCount
+{
+	public static void main(String[] args) {
+	    String data="Java is Object oriented. Java is platform independent.Java is simple.";
+	    int count = 0;
+	    String search = "Java";
+	    String[] newData = data.split(" ");
+	    for(int i=0;i<newData.length;i++){
+	        if(search.equals(newData[i])){
+	            count++;
+	        }
+	    }
+	    System.out.println("Occurance of the word Java is "+count+" times.");
+	}
+}
+
+----------------------------------------------------------------------------------
+
+public class DescendingOrder
+{
+	public static void main(String[] args) {
+	    int arr[] = {4,0,2,3,9,7,6,1,8,5};
+	    int temp;
+	    
+	    for(int i=0;i<10;i++){
+	        for(int j=i+1;j<10;j++){
+	            if(arr[i]<arr[j]){
+	                temp = arr[i];
+	                arr[i] = arr[j];
+	                arr[j] = temp;
+	             }
+	        }
+	    }
+	    for(int i=0;i<10;i++){
+	         System.out.print(arr[i]);
+	    }    
+	}
+}
