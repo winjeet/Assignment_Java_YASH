@@ -42,9 +42,7 @@ public class ThreeDArray
 	         break;
 	       }
 	       System.out.println();
-	   }
-	   
-	       
+	   }      
 	   }
 }
 
