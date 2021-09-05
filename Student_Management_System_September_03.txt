@@ -61,11 +61,11 @@ FACULTY
 FEES
 	-feesPaymentId:long
 	-feesAmount:long
-	-feesPayemntType:Enum
+	-feesPayemntType:String
 	-feesStudentId:long
 	+getFeesPaymentId():long
 	+getFeesAmount():long
-	+getFeesPaymentType():Enum
+	+getFeesPaymentType():String
 	+getFeesStuentId():long
 	+setFeesPaymentId():void
 	+setFeesAmount():void
