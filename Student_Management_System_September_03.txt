@@ -1,0 +1,94 @@
+STUDENT MANAGEMENT SYSTEM
+-----------------------------------------
+
+STUDENT
+	-studentId:long
+	-studentFirstName:String
+	-studentLastName:String
+	-studentAge:int
+	-studentMobile:long
+	-studentEmailId:String
+	-studentAadhar:long
+	-studentAddress:String
+	+getStudentId():long
+	+getStudentFirstName():String
+	+getStudentLastname():String
+	+getStudentAge():int
+	+getStudentMobile():long
+	+getStudentEmail():String
+	+getStudentAadhar():long
+	+getStudentAddress():String
+	+setStudentId():void
+	+setStudentFirstName():void
+	+setStudentLastname():void
+	+setStudentAge():void
+	+setStudentMobile():void
+	+setStudentEmail():void
+	+setStudentAadhar():void
+	+setStudentAddress():void
+.................................................
+COURSE
+	-courseId:long
+	-courseName:String
+	-courseFees:long
+	-courseDuration:int
+	-courseDescription:String
+	+getCourseId():long
+	+getCourseName():String
+	+getCourseFees():long
+	+getCourseDuration():int
+	+getCourseDescription():String
+	+setCourseId():void
+	+setCourseName():void
+	+setCourseFees():void
+	+setCourseDuration():void
+	+setCourseDescription():void
+.......................................................
+FACULTY
+	-facultyId:long
+	-facultyFullName:String
+	-facultyMobile:long
+	-facultyEmail:String
+	-facultyAddress:String
+	-facultyCourseId:long
+	+getFacultyId():long
+	+getFacultyFullName():String
+	+getFacultyMobile():long
+	+getFacultyEmail():String
+	+getFacultyAddress():String
+	+getFacultyCourseId():long
+........................................................
+FEES
+	-feesPaymentId:long
+	-feesAmount:long
+	-feesPayemntType:Enum
+	-feesStudentId:long
+	+getFeesPaymentId():long
+	+getFeesAmount():long
+	+getFeesPaymentType():Enum
+	+getFeesStuentId():long
+	+setFeesPaymentId():void
+	+setFeesAmount():void
+	+setFeesPaymentType():void
+	+setFeesStudentId():void
+.......................................................
+ADMIN
+	-adminId:long
+	-adminFullName:String
+	-adminMobile:long
+	-adminEmailId:String
+	+getAdminId():long
+	+getAdminFullName():String
+	+getAdminMobile():long
+	+getAdminEmailId():String
+	+setAdminId():void
+	+setAdminFullName():void
+	+setAdminEmailId():void
+	+setAdminMobile():void
+....................................................
+LOGIN
+	-userId:long
+	-userPassword:String
+	+getUserId():long
+	+getUserPassword():String
+	
