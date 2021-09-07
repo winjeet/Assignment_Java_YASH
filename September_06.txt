@@ -1,0 +1,58 @@
+public class ReplaceCharacter
+{
+	public static void main(String[] args) {
+	    String str = "Halo";
+	    StringBuffer buffer = new StringBuffer();
+	    for(int i=0;i<str.length();i++){
+	        if(str.charAt(i)=='a'){
+	            buffer.append("o");
+	        }
+	        else if(str.charAt(i)=='o'){
+	            buffer.append("a");
+	        }else{
+	            buffer.append(str.charAt(i));
+	        }
+	    }
+	    System.out.println(buffer);
+	}
+}
+
+------------------------------------------
+
+import java.util.Scanner;
+public class Masking
+{
+	public static void main(String[] args) {
+	    //we follow the masking rule to mask 1/4 of the string from last
+	    Scanner input = new Scanner(System.in);
+	    System.out.print("Enter a String for masking : ");
+	    String mask = input.nextLine();
+	    
+	    StringBuffer buffer = new StringBuffer(mask);
+	    int length = mask.length();
+	    int maskCount = (length*1/4);
+	    for(int i=length-maskCount;i<length;i++){
+	         buffer.replace(i,length,"X");
+	    }
+	    System.out.println(buffer);
+	}
+}
+
+--------------------------------------------
+
+import java.util.Scanner;
+public class StartsEndsWithWord
+{
+	public static void main(String[] args) {
+	    Scanner input = new Scanner(System.in);
+	    System.out.print("Enter a String: ");
+	    String str = input.nextLine();
+	    if((str.startsWith("A")) && (str.endsWith("t"))){
+	        System.out.println("Yes the given string i.e, "+str+" is starts with A and ends with t.");
+	    }else{
+	        System.out.println("No the string doesn't starts with A and end with t");
+	    }
+	    
+	    
+	}
+}
