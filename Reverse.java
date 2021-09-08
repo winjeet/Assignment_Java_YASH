@@ -8,3 +8,5 @@ class Reverse{
 	}
 	System.out.println("reverse of "+num +" = "+t);
 }
+	
+}
