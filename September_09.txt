@@ -175,3 +175,82 @@ public class InterestCalculatorImpl implements InterestCalculator {
 	}
 }
 
+--------------------------------------------------------------------------------------------------------------
+
+3. Identify  appropriate Entities,Sub Entities,abstract classes and interfaces in Order Management System.
+
+Entities:
+
+	Order, Product, Customer, Seller, Delivery, Login
+
+
+Interfaces:
+
+	(Serice Interface)
+	OrderService
+	CustomerDataService
+	SellerDataService
+	ProductService
+	DeliveryService
+	LoginService
+
+	(DAO Interface)
+	OrderDAO
+	CustomerDataDAO
+	SellerDataDAO
+	ProductDAO
+	DeliveryDAO
+	LoginDAO
+
+CLasses:
+	
+	(Model Class)
+	Order:
+		-orderId
+		-orderCustomerId
+		-orderSellerId
+		-orderQuantity
+	Customer:
+		-customerId
+		-customerFullName
+		-customerMobileNo
+		-customerEmailId
+		-customerAddress
+	Seller:
+		-sellerId
+		-sellerFullName
+		-sellerMobileNo
+		-sellerEmailId
+		-sellerAddress
+		-sellerGSTNo
+		-sellerCategory
+	Product:
+		-productId
+		-productType
+		-productDescription
+	Delivery:
+		-deliveryId
+		-deliveryType
+		-deliveryCustomerId
+		-deliverySellerId
+	Login:
+		-userId
+		-userName
+		-userPassword
+		-userEmailId
+
+	(Service Class)
+	OrderServiceImpl
+	CustomerDataServiceImpl
+	SellerDataServiceImpl
+	ProductServiceImpl
+	DeliveryServiceImpl
+	LoginServiceImpl
+
+	(DAO Class)
+	OrderDAOImpl
+	CustomerDataDAOImpl
+	SellerDataDAOImpl
+	ProductDAOImpl
+	DeliveryDAOImpl
+	LoginDAOImpl
