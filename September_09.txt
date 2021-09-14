@@ -1,0 +1,54 @@
+public interface InterestCalculator {
+	public double simpleInterest(double principleAmount,float rate,float time);
+	public double compoundInterest(double principleAmount,float rate,float time);
+}
+
+import java.util.Scanner;
+
+public class InterestCalculatorImpl implements InterestCalculator {
+
+	double simpleInterest;
+	double compoundInterest;
+	
+	@Override
+	public double simpleInterest(double principleAmount, float rate, float time) {
+		simpleInterest = ((principleAmount*rate*time)/100);
+		return simpleInterest;
+	}
+
+	@Override
+	public double compoundInterest(double principleAmount, float rate, float time) {
+		compoundInterest = (principleAmount * Math.pow(1.0+rate/100.0, time)) - principleAmount;
+		return compoundInterest;
+	}
+	
+	public static void main(String[] args) {
+		InterestCalculator interestCalculator = new InterestCalculatorImpl();
+		Scanner input = new Scanner(System.in);
+		int option;
+		do {
+			System.out.print("Enter principle/total amount : ");
+			double principleAmount = input.nextDouble();
+			System.out.print("Enter rate of interest (in %): ");
+			float rate = input.nextFloat();
+			System.out.print("Enter time duration : ");
+			float time = input.nextFloat();
+			
+			System.out.println("Press 1 => calculate Simple Interest");
+			System.out.println("Press 2 => calculate Compound Interest");
+			System.out.println("press 0 => Exist");
+			option = input.nextInt();
+			
+			switch(option) {
+			case 1: System.out.println("Simple Interest = "
+					+interestCalculator.simpleInterest(principleAmount, rate, time));
+				break;
+			case 2: System.out.println("Compound Interest = "
+				+interestCalculator.compoundInterest(principleAmount, rate, time));
+				break;
+			default:
+				break;
+			}
+		}while(option!=0);
+	}
+}
