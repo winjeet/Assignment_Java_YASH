@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Student SYSTEM "Student.dtd" >
+<Student>
+<rollNo>1001</rollNo>
+<sName>Alex</sName>
+<sAge>19</sAge>
+<sCourse>B. Tech</sCourse>
+</Student>
